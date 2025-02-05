@@ -1,0 +1,3 @@
+ replica2_config/recovery.signal
+
+# This file exists only as a trigger for standby mode. No configuration needed.
