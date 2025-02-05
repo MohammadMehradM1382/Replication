@@ -1,0 +1,12 @@
+ primary_config/postgresql.conf
+
+# Enable replication and configure WAL settings
+wal_level = replica
+max_wal_senders = 3
+max_replication_slots = 3
+archive_mode = on
+archive_command = 'test ! -f /tmp/pg_wal_archive/%f && cp %p /tmp/pg_wal_archive/%f'
+hot_standby = on
+
+# Connection settings
+listen_addresses = '*'
