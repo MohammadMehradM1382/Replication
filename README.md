@@ -31,7 +31,7 @@ Navicat (or any other PostgreSQL client) for connecting to the cluster.
 
 Setup Instructions
  1) Clone the repository
-      git clone https://github.com/yourusername/postgres-replication-cluster.git
+      git clone https://github.com/MohammadMehradM1382/replication.git
       cd postgres-replication-cluster
 
  2) Create necessary directories
@@ -71,14 +71,16 @@ Setup Instructions
       Example SQL command:
 
       INSERT INTO test_table (id, name) VALUES (1, 'Test Data');
+    
        SELECT * FROM test_table;
- 7) Simulate Failover
+    
+ 8) Simulate Failover
     To simulate a failover, stop the primary node:
 
         docker stop postgres_primary
 
         HAProxy will automatically reroute traffic to the replicas.
- 8) cleanup(optional)
+ 9) cleanup(optional)
 
       To stop and remove all containers:
 
